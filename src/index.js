@@ -11,9 +11,12 @@ const Root = () => {
   return (
     <BrowserRouter>
       <div>
-        <Route exact path="/" component={StorePicker} />
-        <Route path="/store/:storeId" component={App} />
-        <Route component={NotFound} />
+        <Switch>
+          <Route exact path="/" component={StorePicker} />
+          <Route path="/store/:storeId" component={App} />
+          <Route component={NotFound} />
+        </Switch>
+
       </div>
     </BrowserRouter>
   )
